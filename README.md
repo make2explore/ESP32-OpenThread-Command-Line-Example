@@ -136,54 +136,61 @@ The following examples are supported by `ot_cli`:
 
 ## For the First ESP OT-CLI device (Leader), open a TCP socket server
 
-```
+```bash
 > tcpsockserver open
+Done
 ```
 
 ### Create a new port with any 5 digits and bind it
 
-```
+```bash
 > tcpsockserver bind :: 12345
+Done
 ```
 
 ## On another ESP32 (Child), set up the TCP client
 
 Use IP which we copied in the last steps:
 
-```
+```bash
 > tcpsockclient connect <IP> <Port>
 ```
 
 Example:
 
-```
+```bash
 > tcpsockclient connect fdde:ad00:beef:0:0:ff:fe00:fc00 12345
+Done
 ```
 
 ## Send messages between the ESP32 devices
 
 Send `"Hello"` from TCP Client to TCP Server:
 
-```
+```bash
 > tcpsockclient send hello
+Done
 ```
 
 Send `"Hi"` from TCP Server to TCP Client:
 
-```
+```bash
 > tcpsockserver send hi
+Done
 ```
 
 ## Closing the TCP connection
 
 On Client:
-```
+```bash
 > tcpsockclient close
+Done
 ```
 
 On Server:
-```
+```bash
 > tcpsockserver close
+Done
 ```
 
 ---
